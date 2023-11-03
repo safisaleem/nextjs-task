@@ -8,7 +8,7 @@ const Data = () => {
     const [sortDirection, setsortDirection] = useState('asc');
 
     useEffect(() => {
-        const res = fetch(`${process.env.API_URL}/api?sort=${sortBy}&type=${sortDirection}`).then(res => {
+        const res = fetch(`/api?sort=${sortBy}&type=${sortDirection}`).then(res => {
             res.json().then(posts => {
                 setData(posts);
             });
